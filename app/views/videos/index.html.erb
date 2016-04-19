@@ -1,0 +1,124 @@
+      
+
+
+      <p id="notice"><%= notice %></p>
+            
+     
+ 
+<hr>
+    <% @videos.each do |video| %>
+  
+
+
+<div class="container">
+ 
+
+  <div class="row">
+    
+  
+
+      <div class="col-sm-6">
+ 
+   
+
+ 
+                                                  
+  
+    <div class="embed-responsive embed-responsive-4by3">
+   
+    <%= embed(video.emvid) %>  
+   
+    
+
+    </div>
+       <div class="container">
+  <div class="row">
+  
+  <%= link_to like_video_path(video), class: "like", method: :put do %>
+   
+    <button type="button" class="btn btn-success">WIN!</button>
+  <%end%>
+  <button type="button" class="btn btn-success"><%= video.get_upvotes.size %></button>
+  
+  <%= link_to unlike_video_path(video), class: "unlike", method: :put do %>
+   
+    <button type="button" class="btn btn-danger">LOSE!</button>
+  <%end%>
+  <button type="button" class="btn btn-danger"><%= video.get_downvotes.size %></button>
+  
+  
+</div>
+  </div>
+  
+  
+  
+  </div>
+  
+     
+
+ 
+  
+
+ 
+
+  
+    
+    
+  
+
+        <div class="col-sm-6", style="padding-top:0px">
+  
+               <div class="embed-responsive embed-responsive-4by3">
+                 
+  <%= image_tag("ad3.jpg", :class => "img-responsive", :style => "position:absolute; height:100%; width: 100%") %>
+         
+    
+  
+ 
+       
+    
+       </div>
+ 
+
+    </div>
+  </div
+  
+  
+    
+  
+
+
+
+     
+     
+     
+  
+    
+  
+     
+     
+             
+     
+
+
+  
+  
+  
+  
+  
+  
+  
+            
+            
+        
+        
+        
+     
+      
+      
+      
+      
+    <% end %>
+  
+
+

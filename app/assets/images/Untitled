@@ -1,0 +1,4 @@
+<div class="field">
+    <%= f.label :advert %><br>
+    <%= f.text_field :advert %>
+  </div>
